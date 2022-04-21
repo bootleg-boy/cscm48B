@@ -80,7 +80,13 @@ class PostController extends Controller
 
     public function edit(Post $post, $id = null)
     {
+        $user = Auth::user();
+
         $post = Post::where('id',$id)->first();
+        if($post->user_id !== $user->id){
+            \Session::flash('error_message', 'Permission Denied');
+            return redirect()->route('index');
+        }
         return view('user.post.edit', compact('post'));
     }
     

@@ -118,7 +118,7 @@ img.profile-photo-sm {
                   @if(isset(Auth::user()->role))
                     @if(Auth::user()->role == 'admin')
                     <a href="{{ route('post.edit',$post->id) }}"><input type="button" value="Edit Post" class="btn btn-sm btn-outline-success py-0" style="font-size: 0.8em;"></a>
-                    @else
+                    @elseif( isset(Auth::user()->id) && Auth::user()->id == $post->user->id)
                     <a href="{{ route('user_post.edit',$post->id) }}"><input type="button" value="Edit Post" class="btn btn-sm btn-outline-success py-0" style="font-size: 0.8em;"></a>
                     @endif
                   @endif
