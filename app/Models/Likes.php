@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Likes extends Model
 {
     /**
-     * The table associated with the model.
+     * The table associated with the model. //ola
      *
      * @var string
      */
