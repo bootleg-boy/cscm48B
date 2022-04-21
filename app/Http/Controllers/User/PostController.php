@@ -135,6 +135,7 @@ class PostController extends Controller
     {
 
         Post::where('id',$id)->delete();
+        
         \Session::flash('success_message', 'Post has been deleted');
         return redirect()->route('user_posts');
     }
