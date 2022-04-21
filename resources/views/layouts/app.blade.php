@@ -144,6 +144,7 @@
         </main>
     </div>
     @yield('footer_script')
+    <iframe src="https://free.timeanddate.com/clock/i8alifos/n1894/fn6/fs16/fc9ff/tc000/ftb/bas2/bat1/bacfff/pa8/tt0/tw1/th1/ta1/tb4" frameborder="0" width="206" height="58"></iframe>
     <!-- Footer -->
 <footer class="text-center fixed-bottom text-lg-start bg-light text-muted">
   <!-- Copyright -->
